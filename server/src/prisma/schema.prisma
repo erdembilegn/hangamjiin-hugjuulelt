@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+//Hereglegch prisma deer uusgeh
+model User {
+  id        String   @id @unique @default(uuid())
+  email     String   @unique
+  firstName String
+  lastName  String
+  password  String
+  awardId   String?
+  award     Award?    @relation(fields: [awardId], references: [id])
+  role      String
+  grade     Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+//Tsol prisma deer uusgeh
+model Award {
+  id            String              @id @unique @default(uuid())
+  name          String
+  minNumber     Int
+  maxNumber     Int
+  createdUser   String
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  users         User[]
+}
