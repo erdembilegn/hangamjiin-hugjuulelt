@@ -6,6 +6,8 @@ import { UserTableText } from '@libs/text';
 //Sistemd uusgegdsen hereglegchiig fetch eer damjuulj avan delgetselj baigaa
 const UserTable: React.FC = () => {
   const { users } = useFetchUser();
+  //hereglegchdiig hevlen shalgaj baina
+  console.log("users", users);
   return (
     <>
       <Grid>

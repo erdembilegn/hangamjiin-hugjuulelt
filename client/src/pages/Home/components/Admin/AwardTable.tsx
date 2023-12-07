@@ -7,6 +7,8 @@ import { AwardTableText } from '@libs/text';
 //Sistemd uusgegdsen tsoliig fetch eer damjuulj avan delgetselj baigaa
 const AwardTable: React.FC = () => {
   const { awards } = useFetchAward();
+  //tsoliig hevlen shalgaj baina
+  console.log("awards", awards);
   return (
     <>
       <Grid>

@@ -16,6 +16,8 @@ const LeaderboardTable: React.FC = () => {
   const sortedStudents = useMemo(() => {
     return students?.slice().sort((a, b) => (b.grade ?? 0) - (a.grade ?? 0));
   }, [students]);
+  //Erembelegdsen suraltsagchdiig hevlen shalgaj baina
+  console.log("sorted students", sortedStudents);
   return (
     <>
       <Grid justifyContent="center" margin={'25px'}>
