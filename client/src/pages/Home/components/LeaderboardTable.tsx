@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Grid, Heading,Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
-import { useFetchAward, useFetchUser } from '@libs/hooks';
+import { useFetchAward, useFetchUser} from '@libs/hooks';
 import { Colors } from '@libs/colors';
 import { useMemo } from 'react';
 import { LeaderboardText } from '@libs/text';
@@ -55,7 +55,7 @@ const LeaderboardTable: React.FC = () => {
                           {award.name}
                         </Td>
                       ))}
-                      <Td><Button ><DragHandleIcon/> </Button></Td>
+                      <Td><Button size={'sm'} leftIcon={<DragHandleIcon/>} _hover={{ background: "#eae8f0" }} bgColor={'#eae8f0'}></Button></Td>
                     </Tr>
                   );
                 })}
